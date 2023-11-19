@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 
-import { Command } from "commander";
+import { createCommand } from "commander";
+import { exampleCommand } from "./scripts/example/index.js";
+import { createService } from "./scripts/createService/index.js";
 
-const program = new Command();
+// Создаем экземляр
+export const programCLI = createCommand();
 
-program.action(() => {
-  console.log("Test");
-});
+programCLI.addCommand(createService);
 
-program.parse(process.argv);
+// programCLI.addCommand(exampleCommand);
