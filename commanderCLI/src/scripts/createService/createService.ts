@@ -1,20 +1,12 @@
 #!/usr/bin/env node
+import { Command } from "commander";
 
-import { createCommand } from "commander";
+export function makeCreateService() {
+  const service = new Command("createService")
+    .description("Копирует шаблон услуги в директорию")
+    .action(() => {
+      console.log("Скопировал шаблон услуги в твою директорию");
+    });
 
-// Declare the program
-
-export const createService = createCommand();
-
-// Add actions onto that CLI
-
-createService
-  .name("createService")
-  .action(() => {
-    console.log("Должен скопировать шаблон услуги в твою директорию");
-  })
-  .description("Копировует шаблон услуги в директорию");
-
-// Execute the CLI with the given arguments
-
-createService.parse(process.argv);
+  return service;
+}

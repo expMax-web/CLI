@@ -1,1 +1,1 @@
-export { exampleCommand } from "./exampleCommand.js";
+export { makeExampleCommand } from "./exampleCommand.js";
