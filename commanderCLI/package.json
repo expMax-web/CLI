@@ -2,15 +2,14 @@
   "name": "commander-cli",
   "type": "module",
   "bin": {
-    "commander-cli": "./dist/index.js"
+    "commander-cli": "./dist/src/index.js"
   },
   "version": "1.0.0",
   "description": "Test cli on commander JS",
   "main": "index.js",
   "scripts": {
     "compile": "tsc",
-    "start": "npm run compile && node ./dist/index.js",
-    "plop": "plop create-component"
+    "start": "npm run compile && node ./dist/index.js"
   },
   "keywords": [],
   "devDependencies": {

@@ -12,9 +12,11 @@ export function makeCreateService() {
   const service = new Command("createService")
     .description("Копирует шаблон услуги в директорию")
     .action(() => {
+      console.log(__dirname);
+
       Plop.prepare(
         {
-          configPath: path.join(__dirname, "plopfile.js"),
+          configPath: path.resolve(__dirname, "../../../plopfile.js"),
         },
         (env) => Plop.execute(env, run as any)
       );
