@@ -13,5 +13,5 @@
     "moduleResolution": "node",
     "types": ["node"]
   },
-  "include": ["src"]
+  "include": ["src", "plopfile.ts"]
 }
