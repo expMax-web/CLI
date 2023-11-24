@@ -18,7 +18,7 @@ export default function (plop: NodePlopAPI) {
       {
         type: "input",
         name: "name",
-        message: "Enter service name",
+        message: "Введи название услуги",
       },
     ],
     actions: [
