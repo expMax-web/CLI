@@ -2,7 +2,7 @@ export const PROMPTS = [
   {
     type: "input",
     name: "message",
-    message: "What do you want to display in the console",
+    message: "Что ты хочешь вывести в консоль?",
     validate(value: string) {
       const valid = typeof value === "string";
       return valid || "Please enter string";
