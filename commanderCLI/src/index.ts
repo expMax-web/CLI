@@ -25,7 +25,6 @@ export const PROMPTS: QuestionCollection[] = [
   },
 ];
 
-// Замутить штуку с подсказкой, Какую команду ты хочешь запустить? Чтобы можно было в консольке стрелками выбрать команду и жмякнуть enter. После чего запуститься та или иная команда
 program.action(async () => {
   await inquirer.prompt(PROMPTS).then((value: InquirerAnswers) => {
     const answer = value as Answers;
